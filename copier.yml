@@ -1,0 +1,13 @@
+project_name:
+  type: str
+  help: Project Name (eg. my-project, same name as github repo is assumed)
+
+package_name:
+  type: str
+  help: Package Name (eg. my_project)
+
+project_description:
+  type: str
+  help: Project Description
+
+_subdirectory: template
