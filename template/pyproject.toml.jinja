@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
@@ -38,8 +38,16 @@ Homepage = "https://github.com/m-birke/{{project_name}}"
 Issue = "https://github.com/m-birke/{{project_name}}/issues"
 Source = "https://github.com/m-birke/{{project_name}}"
 
+[tool.hatch]
+build.hooks.vcs.version-file = "src/{{package_name}}/_version.py"
+build.targets.wheel.packages = ["src/{{package_name}}/"]
+
 [tool.hatch.version]
-path = "src/{{package_name}}/__about__.py"
+source = "vcs"
+raw-options = {
+  version_scheme = "guess-next-dev",
+  local_scheme = "node",
+  }
 
 [tool.hatch.envs.default]
 dependencies = [
