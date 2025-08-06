@@ -49,6 +49,7 @@ source = "vcs"
 raw-options = {version_scheme = "guess-next-dev"}
 
 [tool.hatch.envs.default]
+path = "./.hatch/default"
 dependencies = [
   "coverage[toml]>=6.5",
   "pytest",
@@ -69,6 +70,7 @@ cov = [
 python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.types]
+path = "./.hatch/types"
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
