@@ -9,5 +9,5 @@
 
 ## Usage
 
-- `copier copy https://github.com/m-birke/python-project-template.git`
+- `copier copy https://github.com/m-birke/python-project-template.git .`
 - `copier update -A`
