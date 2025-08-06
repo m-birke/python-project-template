@@ -10,4 +10,5 @@
 ## Usage
 
 - `copier copy https://github.com/m-birke/python-project-template.git .`
+- `git update-index --add --chmod=+x ci/*.sh`
 - `copier update -A`
