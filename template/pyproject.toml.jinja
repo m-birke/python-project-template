@@ -26,6 +26,8 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: Implementation :: CPython",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
 ]
 dependencies = [
   # TODO
@@ -35,7 +37,7 @@ dependencies = [
 Changelog = "https://github.com/m-birke/{{project_name}}/blob/main/CHANGELOG.md"
 Documentation = "https://github.com/m-birke/{{project_name}}#readme"
 Homepage = "https://github.com/m-birke/{{project_name}}"
-Issue = "https://github.com/m-birke/{{project_name}}/issues"
+Issues = "https://github.com/m-birke/{{project_name}}/issues"
 Source = "https://github.com/m-birke/{{project_name}}"
 
 [tool.hatch]
@@ -44,10 +46,7 @@ build.targets.wheel.packages = ["src/{{package_name}}/"]
 
 [tool.hatch.version]
 source = "vcs"
-raw-options = {
-  version_scheme = "guess-next-dev",
-  local_scheme = "node",
-  }
+raw-options = {version_scheme = "guess-next-dev", local_scheme = "node"}
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -74,12 +73,7 @@ extra-dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/dieter tests}"
-
-[tool.black]
-target-version = ["py310"]
-line-length = 120
-skip-string-normalization = true
+check = "mypy --install-types --non-interactive {args:src/{{package_name}} tests}"
 
 [tool.ruff]
 target-version = "py310"
