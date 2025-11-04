@@ -10,12 +10,14 @@
     {
       "matchManagers": [
         "pre-commit"
-      ]
+      ],
+      "enabled": true
     },
     {
       "matchManagers": [
         "github-actions"
-      ]
+      ],
+      "enabled": true
     }
   ]
 }
