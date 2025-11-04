@@ -7,14 +7,6 @@
     "enabled": true
   },
   "includePaths": [
-    "template"
-  ],
-  "packageRules": [
-    {
-      "matchManagers": [
-        "github-actions",
-        "pre-commit"
-      ]
-    }
+    "**/.pre-commit-config.yaml"
   ]
 }
