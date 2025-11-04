@@ -1,6 +1,8 @@
 name: Renovation
 
-on: [push]
+on:
+  - push
+  - workflow_dispatch
 
 jobs:
   update-dependencies:
