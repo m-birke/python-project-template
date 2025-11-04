@@ -3,21 +3,18 @@
   "extends": [
     "config:recommended"
   ],
+  "pre-commit": {
+    "enabled": true
+  },
   "includePaths": [
-    "**/.pre-commit-config.yaml"
+    "template"
   ],
   "packageRules": [
     {
       "matchManagers": [
+        "github-actions",
         "pre-commit"
-      ],
-      "enabled": true
-    },
-    {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "enabled": true
+      ]
     }
   ]
 }
